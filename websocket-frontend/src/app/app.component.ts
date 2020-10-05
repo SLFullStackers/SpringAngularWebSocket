@@ -9,11 +9,11 @@ import {MessageService} from './message.service';
 export class AppComponent {
   title = 'websocket-frontend';
   input;
-  constructor(private messageService: MessageService) {}
-  sendMessage() {
-    if (this.input) {
-      this.messageService.sendMessage(this.input);
-      this.input = '';
-    }
-  }
+  // constructor(private messageService: MessageService) {}
+  // sendMessage() {
+  //   if (this.input) {
+  //     this.messageService.sendMessage(this.input);
+  //     this.input = '';
+  //   }
+  // }
 }
