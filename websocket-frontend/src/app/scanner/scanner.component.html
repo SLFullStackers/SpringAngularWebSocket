@@ -1,7 +1,0 @@
-<button (click)="scanToJpg()">Scan</button>
-<button (click)="scannerService.resetImage()">reset</button>
-<button (click)="scannerService.viewImage()">View</button>
-
-<div *ngIf="scannerService.docImage">
-  <img [src]="scannerService.docImage" width="30%">
-</div>
