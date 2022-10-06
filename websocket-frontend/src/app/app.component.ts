@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, HostListener} from '@angular/core';
 import {MessageService} from './message.service';
 
 @Component({
@@ -14,6 +14,13 @@ export class AppComponent {
     if (this.input) {
       this.messageService.sendMessage(this.input);
       this.input = '';
+    }
+  }
+
+  @HostListener('document:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    if (event.key === 'Enter') {
+      this.sendMessage();
     }
   }
 }
